@@ -48,6 +48,7 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
             'PrestaShop\\HeaderStamp\\' => 23,
             'PrestaShop\\CodingStandards\\' => 27,
             'PhpParser\\' => 10,
+            'PhpOption\\' => 10,
             'PhpCsFixer\\' => 11,
         ),
         'E' => 
@@ -56,6 +57,7 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         ),
         'D' => 
         array (
+            'Dotenv\\' => 7,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
         ),
@@ -175,6 +177,10 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'PhpOption\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
         'PhpCsFixer\\' => 
         array (
             0 => __DIR__ . '/..' . '/friendsofphp/php-cs-fixer/src',
@@ -182,6 +188,10 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         'Example\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
         'Doctrine\\Common\\Lexer\\' => 
         array (
@@ -198,6 +208,16 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         'Composer\\Semver\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/semver/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'R' => 
+        array (
+            'Raven_' => 
+            array (
+                0 => __DIR__ . '/..' . '/sentry/sentry/lib',
+            ),
         ),
     );
 
@@ -242,7 +262,33 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         'Doctrine\\Common\\Annotations\\SimpleAnnotationReader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/SimpleAnnotationReader.php',
         'Doctrine\\Common\\Annotations\\TokenParser' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/TokenParser.php',
         'Doctrine\\Common\\Lexer\\AbstractLexer' => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php',
+        'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
+        'Dotenv\\Environment\\AbstractVariables' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/AbstractVariables.php',
+        'Dotenv\\Environment\\Adapter\\AdapterInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/AdapterInterface.php',
+        'Dotenv\\Environment\\Adapter\\ApacheAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/ApacheAdapter.php',
+        'Dotenv\\Environment\\Adapter\\ArrayAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/ArrayAdapter.php',
+        'Dotenv\\Environment\\Adapter\\EnvConstAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/EnvConstAdapter.php',
+        'Dotenv\\Environment\\Adapter\\PutenvAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/PutenvAdapter.php',
+        'Dotenv\\Environment\\Adapter\\ServerConstAdapter' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/Adapter/ServerConstAdapter.php',
+        'Dotenv\\Environment\\DotenvFactory' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/DotenvFactory.php',
+        'Dotenv\\Environment\\DotenvVariables' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/DotenvVariables.php',
+        'Dotenv\\Environment\\FactoryInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/FactoryInterface.php',
+        'Dotenv\\Environment\\VariablesInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Environment/VariablesInterface.php',
+        'Dotenv\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',
+        'Dotenv\\Exception\\InvalidFileException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidFileException.php',
+        'Dotenv\\Exception\\InvalidPathException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidPathException.php',
+        'Dotenv\\Exception\\ValidationException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
+        'Dotenv\\Lines' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Lines.php',
+        'Dotenv\\Loader' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Loader.php',
+        'Dotenv\\Parser' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Parser.php',
+        'Dotenv\\Regex\\Error' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Regex/Error.php',
+        'Dotenv\\Regex\\Regex' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Regex/Regex.php',
+        'Dotenv\\Regex\\Result' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Regex/Result.php',
+        'Dotenv\\Regex\\Success' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Regex/Success.php',
+        'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
+        'Example\\Exception\\ExampleException' => __DIR__ . '/../..' . '/src/Exception/ExampleException.php',
+        'Example\\Handler\\SentryHandler' => __DIR__ . '/../..' . '/src/Handler/SentryHandler.php',
         'Example\\Services\\CalculatorService' => __DIR__ . '/../..' . '/src/Services/CalculatorService.php',
         'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
         'PhpCsFixer\\AbstractAlignFixerHelper' => __DIR__ . '/..' . '/friendsofphp/php-cs-fixer/src/AbstractAlignFixerHelper.php',
@@ -699,6 +745,10 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         'PhpCsFixer\\Utils' => __DIR__ . '/..' . '/friendsofphp/php-cs-fixer/src/Utils.php',
         'PhpCsFixer\\WhitespacesFixerConfig' => __DIR__ . '/..' . '/friendsofphp/php-cs-fixer/src/WhitespacesFixerConfig.php',
         'PhpCsFixer\\WordMatcher' => __DIR__ . '/..' . '/friendsofphp/php-cs-fixer/src/WordMatcher.php',
+        'PhpOption\\LazyOption' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/LazyOption.php',
+        'PhpOption\\None' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/None.php',
+        'PhpOption\\Option' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/Option.php',
+        'PhpOption\\Some' => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption/Some.php',
         'PhpParser\\Autoloader' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Autoloader.php',
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
         'PhpParser\\BuilderAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderAbstract.php',
@@ -933,6 +983,28 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         'Psr\\SimpleCache\\CacheException' => __DIR__ . '/..' . '/psr/simple-cache/src/CacheException.php',
         'Psr\\SimpleCache\\CacheInterface' => __DIR__ . '/..' . '/psr/simple-cache/src/CacheInterface.php',
         'Psr\\SimpleCache\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/simple-cache/src/InvalidArgumentException.php',
+        'Raven_Autoloader' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Autoloader.php',
+        'Raven_Breadcrumbs' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Breadcrumbs.php',
+        'Raven_Breadcrumbs_ErrorHandler' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Breadcrumbs/ErrorHandler.php',
+        'Raven_Breadcrumbs_MonologHandler' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Breadcrumbs/MonologHandler.php',
+        'Raven_Client' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Client.php',
+        'Raven_Compat' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Compat.php',
+        'Raven_Context' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Context.php',
+        'Raven_CurlHandler' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/CurlHandler.php',
+        'Raven_ErrorHandler' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/ErrorHandler.php',
+        'Raven_Exception' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Exception.php',
+        'Raven_Processor' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Processor.php',
+        'Raven_Processor_RemoveCookiesProcessor' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Processor/RemoveCookiesProcessor.php',
+        'Raven_Processor_RemoveHttpBodyProcessor' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Processor/RemoveHttpBodyProcessor.php',
+        'Raven_Processor_SanitizeDataProcessor' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Processor/SanitizeDataProcessor.php',
+        'Raven_Processor_SanitizeHttpHeadersProcessor' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Processor/SanitizeHttpHeadersProcessor.php',
+        'Raven_Processor_SanitizeStacktraceProcessor' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Processor/SanitizeStacktraceProcessor.php',
+        'Raven_ReprSerializer' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/ReprSerializer.php',
+        'Raven_SanitizeDataProcessor' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/SanitizeDataProcessor.php',
+        'Raven_Serializer' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Serializer.php',
+        'Raven_Stacktrace' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Stacktrace.php',
+        'Raven_TransactionStack' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/TransactionStack.php',
+        'Raven_Util' => __DIR__ . '/..' . '/sentry/sentry/lib/Raven/Util.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AdapterInterface' => __DIR__ . '/..' . '/symfony/cache/Adapter/AdapterInterface.php',
@@ -1435,6 +1507,7 @@ class ComposerStaticInitceac0ebf557b577a978444e12d02a860
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitceac0ebf557b577a978444e12d02a860::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitceac0ebf557b577a978444e12d02a860::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitceac0ebf557b577a978444e12d02a860::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitceac0ebf557b577a978444e12d02a860::$classMap;
 
         }, null, ClassLoader::class);

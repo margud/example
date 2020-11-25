@@ -2,3 +2,5 @@ services:
   Example\Services\CalculatorService:
     class: Example\Services\CalculatorService
 
+  Example\Handler\SentryHandler:
+    class: Example\Handler\SentryHandler
