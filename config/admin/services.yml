@@ -1,0 +1,4 @@
+services:
+  Example\Services\CalculatorService:
+    class: Example\Services\CalculatorService
+
