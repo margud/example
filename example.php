@@ -1,6 +1,6 @@
 <?php
 
-use example\services\CalculatorService;
+use Example\Services\CalculatorService;
 use PrestaShop\ModuleLibServiceContainer\DependencyInjection\ServiceContainer;
 
 if (!defined('_PS_VERSION_')) {
