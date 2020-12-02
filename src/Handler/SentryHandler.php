@@ -15,11 +15,6 @@ class SentryHandler
      */
     protected $client;
 
-    /**
-     * @var SentryHandler
-     */
-    private static $instance;
-
     public function __construct()
     {
         $module = Module::getInstanceByName('example');
@@ -52,29 +47,10 @@ class SentryHandler
      */
     public function handle($error, $code = null, $throw = true)
     {
-        $code ? $this->client->captureException($error) : $this->client->captureMessage($error);
+        $this->client->captureException($error);
         if ($code && true === $throw) {
             http_response_code($code);
             throw $error;
         }
-    }
-
-    /**
-     * @return SentryHandler
-     */
-    public static function getInstance()
-    {
-        if (self::$instance === null) {
-            self::$instance = new SentryHandler();
-        }
-
-        return self::$instance;
-    }
-
-    /**
-     * @return void
-     */
-    private function __clone()
-    {
     }
 }

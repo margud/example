@@ -5,6 +5,7 @@ use Example\Exception\ExampleException;
 use Example\Handler\SentryHandler;
 use Example\Services\CalculatorService;
 use PrestaShop\ModuleLibServiceContainer\DependencyInjection\ServiceContainer;
+use AttributeCore as Attribute;
 
 if (!defined('_PS_VERSION_')) {
     exit;
@@ -53,15 +54,23 @@ class example extends Module
         $result = $calculatorService->plus('5.5', 6.4);
 
         try {
-            throw new Exception('test exception');
+            $product = new Product(1);
+            $product->id = 'a';
+            $product->update();
         } catch (Exception $e) {
             /** @var SentryHandler $sentryHandler */
             $sentryHandler = $this->getService(SentryHandler::class);
             $sentryHandler->handle(
-                new ExampleException('Failed to get content'),
-                500,
+                new ExampleException('Failed to get content', $e->getCode(), $e),
+                $e->getCode(),
                 false
             );
+        }
+
+        $a = $this->context->controller->className;
+
+        if ($this->context->controller instanceof \PrestaShopBundle\Controller\Admin\ProductController) {
+            $test = 1;
         }
         die($result);
     }
