@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        presta-versions: ['1.7.0.3', 'latest']
+        presta-versions: ['1.7.0.3', '1.6.1.24', 'latest']
     steps:
       - name: Checkout
         uses: actions/checkout@v2.0.0
